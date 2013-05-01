@@ -7,6 +7,6 @@ class PostsController < ApplicationController
       current_user.save
     end
     flash[:success] = "Post created!"
-    redirect_to current_user
+    redirect_to root_url
   end
 end

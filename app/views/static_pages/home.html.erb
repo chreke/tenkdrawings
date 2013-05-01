@@ -1,0 +1,21 @@
+<h1>Welcome, <%= @user.name %></h1>
+<p>
+  <%= @user.name %> [<%= @user.level %>]
+  <img src="<%= gravatar_for @user %>"/>
+</p>
+
+<!-- TODO: Replace this with bootstrap progress bar -->
+<div style="width: 400px;height:10px;background-color:gray">
+  <div style="width: <%= @user.progress * 100 %>%;height:10px;background-color:green">
+  </div>
+</div>
+
+<% form_settings = {:multipart => true} %>
+<%= form_for :post, url: posts_path, html: form_settings do |f| %>
+  <%= f.file_field :image %>
+  <%= f.submit "Submit" %>
+<% end %>
+
+<% @user.posts.order('created_at desc').each do |p| %>
+  <%= image_tag p.image.url(:medium) %>
+<% end %>
