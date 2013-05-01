@@ -1,2 +1,6 @@
 TODO: Implement signout
 TODO: Write down submitting images via email
+TODO: Switch templates to HAML
+TODO: Use bootstrap (check out Jetstrap?)
+TODO: Remove app secret from repo
+TODO: Store images in S3 (in prod?)
