@@ -6,7 +6,9 @@ class Post < ActiveRecord::Base
   has_attached_file :image, styles: styles
   after_initialize :roll_experience
 
+  # TODO: Change random factor to be logarithmic so we get a bell
+  # curve?
   def roll_experience
-    @experience = Random::rand(20) + 20;
+    @experience = Random::rand(50) + 50;
   end
 end
