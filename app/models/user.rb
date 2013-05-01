@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   before_save :create_remember_token
 
   def level
-    User.experience_to_level(self.experience).round
+    User.experience_to_level(self.experience).floor
   end
 
   def progress
