@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   has_many :posts
 
   before_save { |user| user.email = email.downcase }
-  before_save :create_remember_token
+  before_create :create_remember_token
 
   def level
     User.experience_to_level(self.experience).floor
