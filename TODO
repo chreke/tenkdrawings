@@ -1,7 +1,0 @@
-TODO: Implement signout
-TODO: Write down submitting images via email
-TODO: Switch templates to HAML
-TODO: Use bootstrap (check out Jetstrap?)
-TODO: Add ps version to gemfile
-TODO: Add S3 credentials + app secret to Heroku env
-TODO: Use Unicorn in production
